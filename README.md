@@ -1,6 +1,41 @@
 # mirobot_ros2
 WLKATA Mirobot ROS 2 Pkgs
 
+## Package build Example
+
+1. create ros2 workspace
+
+```bash
+mkdir -p ~/mirobot_ros2_ws/src
+cd ~/mirobot_ros2_ws
+colcon build --symlink-install
+```
+
+2. clone and build serial package
+
+```
+cd ~/mirobot_ros2_ws/src
+git clone https://github.com/RoverRobotics-forks/serial-ros2.git
+cd ../
+colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release serial
+```
+
+3. build this repo
+
+```
+cd ~/mirobot_ros2_ws
+source ./install/setup.bash
+cd src
+git clone https://github.com/Road-Balance/mirobot_ros2.git
+cd ../
+colcon build --symlink-install --packages-select mirobot_description
+source ./install/setup.bash
+```
+
+---
+
+## Usage
+
 * rviz control
 
 ```
