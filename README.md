@@ -13,7 +13,7 @@ colcon build --symlink-install
 
 2. clone and build serial package
 
-```
+```bash
 cd ~/mirobot_ros2_ws/src
 git clone https://github.com/RoverRobotics-forks/serial-ros2.git
 cd ../
@@ -22,7 +22,7 @@ colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release serial
 
 3. build this repo
 
-```
+```bash
 cd ~/mirobot_ros2_ws
 source ./install/setup.bash
 cd src
